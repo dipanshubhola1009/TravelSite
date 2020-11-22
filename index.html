@@ -13,14 +13,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Indiamap digital</title>
-    <link rel="icon" href="/boilercode.pagewyze.com/oY24/images/faviconi.png" />
+    <link rel="icon" href="./images/logo.png" />
 
     <!-- Fontawesome Icon font -->
     <link
       href="/boilercode.pagewyze.commaxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./style2.css" rel="stylesheet" />
 </head>
 <body>
    
@@ -51,30 +51,30 @@
                       >&times;</a
                     >
                     <li class="nav-item ">
-                      <a class="nav-link" href="/"
-                        >HOME<span class="sr-only">(current)</span></a
+                      <a class="nav-link" onclick="ScrollFunction('home')"
+                        >HOME</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/about">ABOUT</a>
+                      <a class="nav-link" onclick="ScrollFunction('about')">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/Destinations"
+                      <a class="nav-link" onclick="ScrollFunction('destination')"
                         >DESTINATIONS</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/our-tour">OUR TOURS</a>
+                      <a class="nav-link" onclick="ScrollFunction('our-tour')">OUR TOURS</a>
                     </li>
            
                     <li class="nav-item">
-                      <a class="nav-link" href="/awards">AWARDS & TESTIMONIALS</a>
+                      <a class="nav-link" onclick="ScrollFunction('awards')">AWARDS & TESTIMONIALS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/past-tour">PAST TOURS</a>
+                        <a class="nav-link" onclick="ScrollFunction('past-tour')">PAST TOURS</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/Contact">CONTACT US</a>
+                      <a class="nav-link" onclick="ScrollFunction('contact')">CONTACT US</a>
                     </li>
                   </div>
 
@@ -89,30 +89,30 @@
                 >
                   <ul class="navbar-nav ml-auto " data-wow-iteration="1">
                     <li class="nav-item ">
-                      <a class="nav-link" href="/"
+                      <a class="nav-link" onclick="ScrollFunction('home')"
                         >HOME</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/About">ABOUT</a>
+                      <a class="nav-link" onclick="ScrollFunction('about')">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/Destinations"
+                      <a class="nav-link" onclick="ScrollFunction('destination')"
                         >DESTINATIONS</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/Our-tours">OUR TOURS</a>
+                      <a class="nav-link" onclick="ScrollFunction('our-tour')">OUR TOURS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/awards">AWARDS & TESTIMONIALS</a>
+                        <a class="nav-link"  onclick="ScrollFunction('awards')"  >AWARDS & TESTIMONIALS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/past-tour">PAST TOURS</a>
+                        <a class="nav-link" onclick="ScrollFunction('past-tour')">PAST TOURS</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/Contact">CONTACT US</a>
+                        <a class="nav-link" onclick="ScrollFunction('contact')">CONTACT US</a>
                     </li>
                   </ul>
                 </div>
@@ -122,7 +122,7 @@
         </div>
       </div>
     </header>
-    <section class="home_banner_main">
+    <section class="home_banner_main" id="home">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 padd">
@@ -148,7 +148,8 @@
 
                 go, it's about how to explore and experience it.
               </p>
-              <button>EXPLORE >></button>
+           <!--- <button>EXPLORE >></button>
+           -->  
             </div>
           </div>
         </div>
@@ -169,39 +170,48 @@
         <div class=" col-6 col-sm-3 col-md-2  ">
           <div class="Image">
             <div class="Image-text">MALAYSIA</div>
-            <img src="./images/slide1.png" width="100%" />
+            <img  src="./images/slide1.png" width="100%" />
           </div>
         </div>
         <div class=" col-6 col-sm-3 col-md-2 ">
+         <div class="Image">
           <div class="Image-text">SINGAPORE</div>
           <img src="./images/slide2.png" width="100%" />
+          </div>
         </div>
         <div class="col-6 col-sm-3 col-md-2 ">
-          
-          <div class="Image-text">THAILAND</div>
-          <img src="./images/slide3.png" width="100%" />
+          <div class="Image"> 
+              <div class="Image-text">THAILAND</div>
+              <img src="./images/slide3.png" width="100%" />
+          </div>
         </div>
         <div class="col-6 col-sm-3 col-md-2 ">
-          
-          <div class="Image-text">INDIA</div>
-          <img src="./images/slide4.png" width="100%" />
+          <div class="Image">
+              <div class="Image-text">INDIA</div>
+              <img src="./images/slide4.png" width="100%" />
+          </div>
+
         </div>
       </div>
     </div>
 
 
-    <section name=about>
+    <section name=about id="about">
      
       <div class="about-second">
         <div class="container"> 
           <div class="row no-gutters">
             <div class="col-12 col-sm-4">
               <img src="./images/about.png" class="About-img" width="100%" />
-              <img class="About-Arrow About-left" src="./images/left arrow.png" />
+              <button class="About-Arrow About-left"  onclick="about(-1)">
+
+                  <img class="About-icon" src="./images/left arrow.png" />
+              </button>
       
             </div>
             <div class="col-12 col-sm-8">
-              <div class="About-details">
+              <div class="About-details" id="A1">
+                  
                 <h3>About</h3>
                 <p>
                  
@@ -209,21 +219,55 @@
 EcStacy was founded by us - 2 travel-bugged friends and namesakes by chance) -Stacy Green and Stacy MIller Hence the name - EcStasy in 2012) We love to travel and wanted to help other travel bugged-people as well so decided to design some tours that can help you make the most of each destination at affordable prices and also give you valuable travel tips that you can use for your future travels as well! We've been organizing adventure tours successfully throughout SouthEast Asia from the US for
 
 sound 7 years now
-<br>
-<br>
+
+                </p>
+              <!---  <h5>Explore</h5>
+                
+                <img class="About-Arrow About-corner" src="./images/right arrow y.png" />
+
+              -->
+              <button  class="About-Arrow About-left2" onclick="about(-1)">
+
+                <img class="About-icon" src="./images/left arrow.png" />
+            </button>
+               <button onclick="about(1)" id="next" class="About-Arrow About-right">
+                <img class="About-icon" src="./images/right arrow .png" />
+               </button> 
+              </div>
+
+
+              <div class="About-details" id="A2">
+                  
+               
+                <p>
+                 
+
+
 We are committed to delivering the finest group and solo adventure experiences We believe in doing more than merely visiting a place - we believe in having adventures because travel is not just about where you go.
 
 About how to explore and experience it
 <br>
 <br>
-If you're an adrenaline junkie looking for a thriüng adventure in South East
 
-Asia then look no further than EcStasy
-                </p>
-                <h5>Explore</h5>
+
+                  If you're an adrenaline junkie looking for a thrilling adventure in South East
+                  
+                  Asia then look no further than EcStasy
+                                  </p>
+              <!---  <h5>Explore</h5>
+                
                 <img class="About-Arrow About-corner" src="./images/right arrow y.png" />
-                <img class="About-Arrow About-right" src="./images/right arrow .png" />
+              -->
+              <button  class="About-Arrow About-left2" onclick="about(-1)">
+
+                <img class="About-icon" src="./images/left arrow.png" />
+            </button>
+
+                 <button onclick="about(1)" class="About-Arrow About-right">
+                <img class="About-icon" src="./images/right arrow .png" />
+                 </button> 
               </div>
+          
             </div>
           </div>
         </div>
@@ -233,7 +277,7 @@ Asia then look no further than EcStasy
     </div>
     </section>
 
-    <section name="Destinations/packages">
+    <section name="Destinations/packages" id="destination">
       
       <div class="D-heading">
         <h1>DESTINATIONS/PACKAGES</h1>
@@ -265,14 +309,27 @@ Singapore has amazing adventurous activities for adventure lovers too.
 <b> Activities included -</b>
 <br>
 
+<ul>
+  <li>
+    Bungee Jumping (Malaysia)
+  </li>
+  <li>
+ 
+    Genting theme park (Malaysia)
+  </li>
+  <li>
+    Diving
+  </li>
+  <li>
+    Singapore Zoo Night Safari
+  </li>
+  <li>
+    Sentosa Island (Adventure Cove Waterpark, Dolphin Lagoon)
+  </li>
+</ul>
+ <br>
 
-Bungee Jumping (Malaysia) <br>
-Genting theme park (Malaysia) <br>
 
-Diving <br>
- Singapore Zoo Night Safari<br>
-
-Sentosa Island (Adventure Cove Waterpark, Dolphin Lagoon),<br>
 
 And many more exciting adventures!
 <br>
@@ -299,40 +356,33 @@ Come and experience the fun yourself Sign up for our Malaysia-Singapore package 
             
 <p>
 
-  Some interesting facts about Thailand -<br>
-  -It is a land of surprises and beautiful beach resorts and fun adventures! 
-  <br>
-  -It is the only Southeast Asian country that was never colonized by an European country in fact in the Thai language the name of the country is Prathet Thai which means land of the free Isn't that fitting, now?
-
+  <b>Some interesting facts about Thailand -</b>
+  <ul>
+    <li>It is a land of surprises and beautiful beach resorts and fun adventures! </li>
+    <li>It is the only Southeast Asian country that was never colonized by an European country in fact in the Thai language the name of the country is Prathet Thai which means land of the free Isn't that fitting, now?
+    </li>
+  </ul>
+ 
 </p>
 <p>
 <b>Reasons why you should visit Thailand -</b>
 <br>
 
+<ul>
+  <li>Delicious Thai Food</li>
+  <li>Cheap Cost of Travel adventuron</li>
+  <li>Super-fun and Adrenaline pumping activities for the adventurous</li>
+  <li>Beautiful Weather</li>
+  <li>Epic Nighlife Activities</li>
+  <li>Places Covered in the trip - Krabi Bangkok Phi Phi Islands Wakeboarding</li>
+  <li>Includes exciting activities ike - White water rafting</li>
+  <li>Flight of the Gibbon (Zipline)</li>
+  <li>Scuba diving with whale sharks</li>
+  <li>Rock Cumbing</li>
+  <li>Surfing</li>
+</ul>
 
-<br>
--Delicious Thai Food
-<br>
 
--Cheap Cost of Travel adventuron
-<br>
--Super-fun and Adrenaline pumping activities for the adventurous
-<br>
--Beautiful Weather
-<br>
--Epic Nighlife Activities
-<br>
-Places Covered in the trip - Krabi Bangkok Phi Phi Islands Wakeboarding
-<br>
-Includes exciting activities ike - White water rafting
-<br>
-Flight of the Gibbon (Zipline)
-<br>
-Scuba diving with whale sharks
-<br>
-Surfing
-<br>
-Rock Cumbing
 <br>
 And many more exciting adventures!
 </p>
@@ -373,28 +423,25 @@ And many more exciting adventures!
 <p>
 <b> Includes these activities-</b>
 <br>
-<br>
 
-Skiing<br>
 
-Biking (From Leh to Manali)
-<br> Trekking 
-<br> Hiking
-<br>
- Paragliding
- <br>
+<ul>
+  <li>Skiing</li>
+  <li>Biking (From Leh to Manali)</li>
+  <li>Trekking </li>
+  <li>Hiking</li>
+  <li>Paragliding</li>
+  <li>Heli-skiing</li>
+  <li>Rock-climbing</li>
+  <li>ice-skating</li>
+  <li>Mountain Biking</li>
+</ul>
 
-Heli-skiing
-<br>
 
-Rock-climbing
-<br>
-ice-skating
-<br>
-Mountain Biking.
 <br>
 And many more exciting adventures!
 <br>
+<p>
 Come and experience the fun yourself Sign up for our india(1) package and mail or us to get the full details including pricing
 
 </p>
@@ -451,11 +498,14 @@ Prices for our packages though do not include flight costs and other internation
 <br>
 <b>Activities included</b>
 <br>
-<br>
-Hot Air ballooning (Jaipur)<br>
-Dune-bashing (Jaisalmer)<br>
-Jeep Safari in Jim Corbett National Park <br>
-River rafting (Rishikesh) <br>
+<ul>
+  <li>Hot Air ballooning (Jaipur)</li>
+  <li>Dune-bashing (Jaisalmer)</li>
+  <li>Jeep Safari in Jim Corbett National Park</li>
+  <li>River rafting (Rishikesh) </li>
+</ul>
+
+
 <br>
 And many more exciting adventures! Come and experience the fun yourself Sign up for our India(2) package, and<br>
 mail or call us to get the full details including pricing
@@ -470,61 +520,190 @@ mail or call us to get the full details including pricing
       </div>
     </section>
 
-    <section name="our tour">
+    <section name="our tour" id="our-tour">
       <div class="O-second">
         <div class="container2"> 
           <div class="row no-gutters">
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
               <img src="./images/ourtours.png" class="O-img" width="100%" />
-              <img class="O-Arrow O-left" src="./images/left arrow.png" />
+
+              <button class="O-Arrow O-left" onclick="OurTour(-1)">
+                <img class="O-icon" src="./images/left arrow.png" />
+              </button>
       
             </div>
-            <div class="col-12 col-sm-8">
-              <div class="O-details">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+
+              <div class="O-details" id="O1">
                 <h3>OUR TOURS</h3>
                 <p>
-                 
-
-                  Solo Tours/Singles
-                  <br>
-
-                  Small Group tours (5-10 people) 
-                  <br>
-                  Large group tours (more than 10 people, up to 50)
-                  <br>
-                   All girls group tours (Small and Large group)
-                   <br>
-                    All boys group tours (Small and Large group)
+                  You can choose any of the following types of groups that you want to do your trip with (The minimum age to register with us is 14 - and if your age is below 18, you will need to have an adult who is above 21, in your group):
                 </p>
+                <br>
+                
+                <p>
+                  <b>
+
+                    Small Group Tours 
+                  </b>
+                  <br>
+                <br>
+                  
+
+
+If you are a small group of 5-10 people,
+<br>
+<br> who’d like to go on an adventure trip to any of the 4 places (Thailand, Malaysia, Singapore or India), we’ll arrange a trip exclusively for your small group…we will assign a guide to take you if you choose the option; or you can choose to go without a guide. Our team will still be in contact with you and will be glad to guide you through messages or calls when you need anything or have issue with any of the arrangements. 
+                </p>
+   <!--
                 <h5>Explore</h5>
-                <img class="O-Arrow O-corner" src="./images/right arrow y.png" />
-                <img class="O-Arrow O-right" src="./images/right arrow .png" />
+              
+                <button class="O-Arrow O-corner">
+                 <img class="O-icon"  src="./images/right arrow y.png" />
+                </button> 
+   -->        <button class="O-Arrow O-left2" onclick="OurTour(-1)">
+                <img class="O-icon" src="./images/left arrow.png" />
+              </button>  
+                <button class="O-Arrow O-right" onclick="OurTour(1)">
+                  <img class="O-icon" src="./images/right arrow .png" />
+                </button>
               </div>
+              
+              <div class="O-details" id="O2">
+                
+               
+            
+                
+                <p>
+                  <b>
+
+                    Large Group Tours 
+                  </b>
+                  <br>
+                  <br>
+                
+                  if you are a large group – that is consisting of more than 10 people, anywhere up to 50 –large college or office groups fall under this category -  who’d like to go on an adventure trip to any of the 4 places (Thailand, Malaysia, Singapore or India),
+                  <br>
+                  <br> we’ll arrange a trip for your large group. 
+                </p>
+                <p>
+                  <b>
+                    All girls group tours 
+                  </b>
+                  <br>
+                  <br>
+                  We organize tours exclusively for girls. The groups can be small or large – depending on the number of women registered for any specific trip or destination.
+                  <br>
+
+                  We also have female guides who can go with these groups for the trips where there would be a requirement for this.
+                  <br>
+                  <br>
+                   To get the slots in these groups, you may have to register at least 2 weeks in advance – last minute slots will be available in rare cases, depending on cancellations and availability.
+
+
+             </p>
+   <!--
+                <h5>Explore</h5>
+              
+                <button class="O-Arrow O-corner">
+                 <img class="O-icon"  src="./images/right arrow y.png" />
+                </button> 
+   -->            
+                <button class="O-Arrow O-left2" onclick="OurTour(-1)">
+                  <img class="O-icon" src="./images/left arrow.png" />
+                </button>    
+                <button class="O-Arrow O-right" onclick="OurTour(1)">
+                  <img class="O-icon" src="./images/right arrow .png" />
+                </button>
+              </div>
+
+
+              <div class="O-details" id="O3">
+                
+               
+            
+                
+                <p>
+                  <b>
+                  
+
+All boys group tours 
+
+
+                  </b>
+                  <br>
+                  <br>
+                
+               
+
+We also organize tours exclusively for boys. The groups can be small or large – depending on the number of boys registered for any specific trip or destination.
+<br>
+<br>
+To get the slots in these groups, you may have to register at least 2 weeks in advance –        last minute slots will be available in rare cases, depending on cancellations and availability.
+<br>
+</p>
+                <p>
+                  <b>
+                   
+
+Singles 
+                  </b>
+                  <br>
+                  <br>
+
+                  If you’d like to go on a trip as an individual – and don’t have anyone with you, we can add you to a group of similar people who have registered with us for the same trip you’d like around the same time, or even arrange for a solo tour for you – the costs would depend on the kind of package you decide to go for.
+  <br>
+                  <br>
+
+                  If you’re a girl, and would like to be placed in an all-girls trip, we can do that too – if we have slots! But you will need to register at least a month in advance to get the slots and complete registration formalities.
+
+             </p>
+   <!--
+                <h5>Explore</h5>
+              
+                <button class="O-Arrow O-corner">
+                 <img class="O-icon"  src="./images/right arrow y.png" />
+                </button> 
+   -->           
+   
+   
+                <button class="O-Arrow O-left2" onclick="OurTour(-1)">
+                  <img class="O-icon" src="./images/left arrow.png" />
+                </button>  
+                <button class="O-Arrow O-right" onclick="OurTour(1)">
+                  <img class="O-icon" src="./images/right arrow .png" />
+                </button>
+              </div>
+
+
             </div>
           </div>
+        </div>
         </div>
     </section>
 
 
-    <section name="What customer">
+    <section name="What customer" id="awards" >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-3 col-lg-4">
+          <div class="col-12 col-sm-12 col-md-3 col-lg-2">
             
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-8">
               <div class="W">
                 <h3>WHAT OUR CUSTOMERS SAY -</h3>
+                <!--
                 <p>
                   "It was such a lovely experience traveling with EcStasy - As a group of 4 friends, we went on the India-South tour. The Stacys were super helpful and organized our tours so well- we didn't have to struggle for anything and enjoyed our experience thoroughly - Nick Mosby
                 </p>
+            -->
                 <p>
                  
                   "I traveled solo and went on an adventurous trip throughout California organized by Ecstasy - loved the experience and got to learn so many new things about travel - Megan Hayes 
                 </p>
                 </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-3 col-lg-4">
+          <div class="col-12 col-sm-12 col-md-3 col-lg-2">
 
           </div>
         </div>
@@ -532,7 +711,7 @@ mail or call us to get the full details including pricing
     </section>
    
 
-     <section name='Award'>
+     <section name='Award'  >
        <div class="A">
          <h3>AWARDS</h3>
          <p>We've been nominated for the American Travel Awards twice(2017 and
@@ -544,7 +723,7 @@ mail or call us to get the full details including pricing
      </section>
 
 
-     <section name="Gallery">
+     <section name="Gallery" id="past-tour">
        <div class="container2">
        <div class="G">
          <h3>
@@ -590,7 +769,7 @@ mail or call us to get the full details including pricing
       <div class="container2">
         <div class="wrapper_main">
           <div class="d-flex flex-wrap top_footer ">
-            <div class="col-12 col-md-6 col-lg-3  cont_details">
+            <div class="col-12 col-md-6 col-lg-4 cont_details">
               <div class="footer-block">
                 <a href="/">
                   <img
@@ -604,73 +783,56 @@ mail or call us to get the full details including pricing
                 <p>
                   Address: 2661, Fairway Drive,<br>
                   San Jose, California - 95113<br>
-                  Call us on: 707-413-2055, 669-225-2413<br>
-                  Email us on: Info@ecstacy.com
+                
                 </p>
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3  quick_link">
+            <div class="col-12 col-md-6 col-lg-4  quick_link">
               <div class="footer-block">
                 <h4>QUICK LINKS</h4>
-                <ul>
+                <ul> 
                   <li>
                     <a href="/" onclick="topFunction()">HOME</a>
                   </li>
                   <li>
-                    <a href="/about">ABOUT</a>
+                    <a onclick="ScrollFunction('about')" >ABOUT</a>
+                  </li>
+               
+                  <li>
+                    <a  onclick="ScrollFunction('destinations')" >DESTINATIONS</a>
+                  </li>
+        
+                  <li>
+                    <a  onclick="ScrollFunction('our-tour')" >OUR TOURS</a>
                   </li>
                   <li>
-                    <a href="/">CITY GUIDE</a>
+                    <a  onclick="ScrollFunction('awards')" >AWARDS & TESTIMONIALS</a>
                   </li>
+              
 
                   <li>
-                    <a href="/Blogs">BLOGS</a>
+                    <a  onclick="ScrollFunction('past-tour')" >PAST TOURS</a>
                   </li>
-                  <li>
-                    <a href="/faq">FAQ'S</a>
-                  </li>
+               
                 </ul>
               </div>
             </div>
             
-            <div class="col-12 col-md-6 col-lg-3  quick_link">
-              <div class="footer-block">
-                <h4>QUICK LINKS</h4>
-                <ul>
-                  <li>
-                    <a href="/" onclick="topFunction()">HOME</a>
-                  </li>
-                  <li>
-                    <a href="/about">DESTINATIONS</a>
-                  </li>
-                  <li>
-                    <a href="/">PACKAGES</a>
-                  </li>
-
-                  <li>
-                    <a href="/Blogs">PAST TOURS</a>
-                  </li>
-                  <li>
-                    <a href="/faq">GALLERY</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3  quick_link">
+        
+            <div class="col-12 col-md-6 col-lg-4  quick_link">
               <div class="footer-block">
                 <h4>CONTACT US</h4>
                 <p>
-                  Feel free to get in touch with us via phone or send<br>
+                  Feel free to get in touch with us via <br>
+                   phone: <a href="tel:+70741320505">70741320505</a> or
+                   <br> send
 
-us a message
+us mail to <a href="mailto:info@ecstacy.com">info@ecstacy.com</a>
 
 
                 </p>
-                <div class="row">
-                  <div class="col-6">7074132055</div>
-                  <div class="col-6">info@ecstacy.com</div>
-                </div>
+         
               </div>
             </div>
 
@@ -685,6 +847,8 @@ us a message
     </div>
     </footer>
 
+
+   
     <button onclick="topFunction()" id="myBtn">
       <img src="./images/up.png" width="40px" />
     </button>
